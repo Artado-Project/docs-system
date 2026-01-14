@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #3584E4;
+    --bg-color: #ffffff;
+    --sidebar-bg: #f6f8fa;
+    --text-color: #1a1a1a;
+    --text-muted: #5e5e5e;
+    --border-color: #e1e4e8;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --hover-bg: #f1f3f5;
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1e1e1e;
+    --sidebar-bg: #2d2d2d;
+    --text-color: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border-color: #444;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --hover-bg: #3d3d3d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 2rem 1.5rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.sidebar-logo i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.search-box {
+    margin-bottom: 2rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+    outline: none;
+    transition: var(--transition);
+}
+
+.search-box input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(53, 132, 228, 0.1);
+}
+
+.nav-group {
+    margin-bottom: 1.5rem;
+}
+
+.nav-group-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: var(--hover-bg);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 4rem 10% 4rem 10%;
+    max-width: 1000px;
+}
+
+.doc-header {
+    margin-bottom: 2rem;
+}
+
+.doc-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.doc-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.content-body h2 {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.content-body p {
+    margin-bottom: 1.2rem;
+}
+
+/* Home Page Cards */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: var(--transition);
+    cursor: pointer;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+    border-color: var(--primary-color);
+}
+
+.card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sidebar {
+        display: none; /* Add toggle logic for mobile later */
+    }
+}
