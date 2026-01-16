@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'gnome_docs';
+$dbname = 'artado-docs';
 $username = 'root';
 $password = '';
 
@@ -12,3 +12,4 @@ try {
     die("Database connection failed: " . $e->getMessage());
 }
 ?>
+
