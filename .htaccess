@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteBase /
+
+# Admin routes
+RewriteRule ^admin$ admin.php [L,QSA]
+RewriteRule ^login$ login.php [L,QSA]
+RewriteRule ^logout$ logout.php [L,QSA]
+
+# Redirect docs.php?slug=example to /docs/example (Optional cleanup)
+RewriteCond %{THE_REQUEST} /docs\.php\?slug=([^\s&]+) [NC]
+RewriteRule ^ %1? [R=301,L]
+
+# Sitemap rewrite: /sitemap.xml -> sitemap.xml.php
+RewriteRule ^sitemap\.xml$ sitemap.xml.php [L]
+
+# Category rewrite: /category/slug -> docs.php?cat=slug
+RewriteRule ^category/([^/]+)$ docs.php?cat=$1 [L,QSA]
+
+# Page rewrite: /slug -> docs.php?slug=slug
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ docs.php?slug=$1 [L,QSA]

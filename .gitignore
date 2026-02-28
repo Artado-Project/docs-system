@@ -1,0 +1,14 @@
+# PHP
+vendor/
+composer.lock
+*.log
+
+# Database
+includes/db.php
+
+# Assets/Temp
+.DS_Store
+.vscode/
+.idea/
+*.tmp
+node_modules/
