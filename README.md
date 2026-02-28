@@ -3,7 +3,7 @@
   <h1>🚀 Artado Docs</h1>
   <p><strong>Modern, Hızlı ve Şık Dokümantasyon Yönetim Sistemi</strong></p>
 
-  [![Lisans]([https://img.shields.io/badge/Lisans-Artado-blue.svg](https://img.shields.io/badge/Lisans-MIT-yellow.svg))](#)
+  [![Lisans](https://img.shields.io/badge/Lisans-MIT-yellow.svg)](#)
   [![Versiyon](https://img.shields.io/badge/Versiyon-1.0.0-green.svg)](#)
   [![PHP](https://img.shields.io/badge/Dil-PHP-777bb4.svg)](https://www.php.net/)
   [![MySQL](https://img.shields.io/badge/Veritabani-MySQL-4479a1.svg)](https://www.mysql.com/)
