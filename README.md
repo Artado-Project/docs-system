@@ -67,7 +67,7 @@ Proje, temiz bir mimariyle organize edilmiştir:
 2.  **Veritabanı Oluşturun:** MySQL üzerinden boş bir veritabanı açın.
 3.  **Bağlantıyı Yapılandırın:** `includes/db.php` dosyasını kendi veritabanı bilgilerinizle güncelleyin.
 4.  **Kuruluma Başlayın:** Tarayıcınızdan `site-adresiniz.com/setup.php` sayfasını açın.
-5.  **Tadını Çıkarın:** Kurulum bittikten sonra `admin`/`admin` bilgileriyle giriş yapabilirsiniz.
+5.  **Tadını Çıkarın:** Kurulum bittikten sonra `admin`/`admin123` bilgileriyle giriş yapabilirsiniz.
 
 ---
 
