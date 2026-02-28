@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['setup'])) {
         
         // Ensure admin user exists with correct password
         $username = 'admin';
-        $password = 'Semih+8589';
+        $password = 'admin123';
         $hash = password_hash($password, PASSWORD_DEFAULT);
         
         // Delete existing admin to be sure
@@ -164,3 +164,4 @@ try {
 </div>
 
 <?php include 'footer.php'; ?>
+
